@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+:root {
+  font-size: 62.5%;
+  
+  --ff-texting: 'Palanquin', sans-serif;
+  --ff-heading: 'Staatliches', cursive;
+
+
+  --clr-text-dark: hsl(232, 17%, 35%);
+  --bg-chips: hsl(312, 91%, 96%);
+  --bg-header: hsl(218, 17%, 62%);
+  --bg-body: hsl(233, 100%, 97%);
+  --bg-logo-name: hsl(275, 18%, 79%);
+
+
+}
+
+body {
+  background: var(--bg-body);
+}
+
+header {
+  background: var(--bg-header);
+}
+
+main {
+  padding: 3.2rem;
+}
+main p {
+  font-size: 2rem;
+  font-family: var(--ff-texting);
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: var(--clr-text-dark);
+  margin-bottom: 4rem;
+}
+
+header img {
+  display: block;
+  width: fit-content;
+  padding-top: 3.2rem;
+  margin: 0 auto 3.2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-family: var(--ff-heading);
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 3.4rem;
+  text-align: center;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  letter-spacing: 2px;
+}
+
+header div {
+  width: 100%;
+  background: var(--bg-logo-name);
+  padding: 0.8rem;
+  color: var(--bg-chips);
+}
+
+.grid {
+  display: grid;
+
+  gap: 3.2rem;
+}
+
+.card {
+  position: relative;
+}
+
+.card img {
+  border-radius: 2.0rem;
+
+}
+
+.small img {
+  height: 25rem;
+  object-fit: cover;
+}
+
+.big img {
+  height: 45rem;
+  object-fit: cover;
+}
+
+.card h5 {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  font-family: var(--ff-heading);
+  font-weight: 400;
+  color: var(--clr-text-dark);
+  font-size: 2rem;
+  padding: 0 2.4rem;
+  background: var(--bg-chips);
+  border-radius: 2rem;
+
+
+}
+
