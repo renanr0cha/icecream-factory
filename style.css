@@ -35,6 +35,8 @@ header {
 
 main {
   padding: 3.2rem;
+  animation: downtop 1500ms ease-out;
+
 }
 main p {
   font-size: 2rem;
@@ -45,15 +47,51 @@ main p {
   margin-bottom: 4rem;
 }
 
-header img {
-  display: block;
-  width: fit-content;
-  padding-top: 3.2rem;
-  margin: 0 auto 3.2rem;
-  text-align: center;
+.logo {
+  background: var(--bg-header);
+  position: relative;
+  top: auto;
+  left: auto;
+  height: 28rem;
 }
 
-header h1 {
+.logo .main {
+  width: fit-content;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+  z-index: 2;
+  animation: showup 1000ms ease-in-out backwards
+
+}
+
+.rings {
+  width: fit-content;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+  z-index: 1;
+  
+
+}
+
+#ring-1 {
+  animation: showup 2000ms ease-in-out backwards, ringsmove 5s infinite;
+
+}
+
+#ring-2 {
+  animation: showup 2000ms ease-in-out backwards, ringsmove 5s reverse infinite;
+}
+
+.name h1 {
   font-family: var(--ff-heading);
   font-weight: 400;
   font-size: 4rem;
@@ -63,13 +101,15 @@ header h1 {
   letter-spacing: 2px;
 }
 
-header div {
+.name {
   display: inline-block;
   width: 100%;
   background: var(--bg-logo-name);
   padding: 0.8rem;
   color: var(--bg-chips);
   margin-bottom: 3rem;
+  animation: topdown 1000ms ease;
+
 }
 
 .grid {
@@ -113,3 +153,53 @@ header div {
 
 }
 
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-1.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ringsmove {
+  0% {
+    transform: translate3d(0px, 0px, 0px);
+
+  }
+  20% {
+    transform: translate3d(3px, -5px, 1px);
+  }
+  
+  50% {
+    transform: translate3d(3px, 0px, 0px);
+  }
+  70% {
+    transform: translate3d(-3px, 5px, 1px);
+  }
+  
+  100% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
