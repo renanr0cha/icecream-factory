@@ -14,6 +14,7 @@ img {
   
   --ff-texting: 'Palanquin', sans-serif;
   --ff-heading: 'Staatliches', cursive;
+  --ff-text-desktop: 'Roboto', sans-serif;
 
 
   --clr-text-dark: hsl(232, 17%, 35%);
@@ -33,13 +34,17 @@ header {
   background: var(--bg-header);
 }
 
+header p {
+  display: none;
+}
+
 main {
   padding: 3.2rem;
   animation: downtop 1500ms ease-out;
 
 }
 main p {
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-family: var(--ff-texting);
   font-weight: 400;
   line-height: 1.8rem;
@@ -118,6 +123,14 @@ main p {
   gap: 3.2rem;
 }
 
+.grid div:nth-child(5) {
+  display: none;
+}
+
+.grid div:nth-child(6) {
+  display: none;
+}
+
 .card {
   position: relative;
 }
@@ -149,8 +162,132 @@ main p {
   padding: 0 2.4rem;
   background: var(--bg-chips);
   border-radius: 2rem;
+}
 
+footer {
+  display: none;
+}
 
+@media(min-width: 980px) {
+  body {
+    display: grid;
+    grid-template-columns: 1.3fr 3fr;
+  }
+
+  header {
+    height: 100vh;
+  }
+
+  main {
+    padding: 6.4rem 9.8rem 5rem;
+    position: relative;
+
+  }
+
+  main p {
+    display: none;
+  }
+  header p {
+    font-size: 1.4rem;
+    font-family: var(--ff-text-desktop);
+    font-weight: 400;
+    line-height: 2rem;
+    color: var(--bg-chips);
+    margin: 3.2rem 3.8rem 0;
+    display: block;
+    text-align: center;
+  }
+
+  .name {
+    margin-bottom: 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-areas: 
+            "a b c"
+            "d b f"
+            "d e f"
+            "g g g";
+    gap: 3.2rem;
+  }
+
+  .grid div:nth-child(1) {
+    grid-area: a;
+  }
+
+  .grid div:nth-child(2) {
+    grid-area: b;
+  }
+
+  .grid div:nth-child(3) {
+    grid-area: c;
+  }
+
+  .grid div:nth-child(4) {
+    grid-area: d;
+  }
+
+  .grid div:nth-child(5) {
+    display: block;
+    grid-area: e;
+  }
+
+  .grid div:nth-child(6) {
+    display: block;
+    grid-area: f;
+  }
+
+  footer {
+    position: absolute;
+    display: block;
+    grid-area: g;
+    text-align: center;
+    bottom: 8vh;
+    left: 30vw;
+    right: 0;
+    z-index: -1;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+
+  }
+
+  .card {
+    position: relative;
+  }
+  
+  .card img {
+    border-radius: 2.0rem;
+  
+  }
+  
+  .small img {
+    height: 22vh;
+    object-fit: cover;
+  }
+  
+  .big img {
+    height: 50vh;
+    object-fit: cover;
+  }
+  
+  .card h5 {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    font-family: var(--ff-heading);
+    font-weight: 400;
+    line-height: 3.4rem;
+    color: var(--clr-text-dark);
+    font-size: 2rem;
+    padding: 0 2.4rem;
+    background: var(--bg-chips);
+    border-radius: 2rem;
+  
+  
+  }
 }
 
 @keyframes topdown {
