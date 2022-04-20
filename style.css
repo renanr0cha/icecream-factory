@@ -178,6 +178,7 @@ footer {
 
   header {
     height: 100vh;
+    max-width: 60rem;
   }
 
   main {
