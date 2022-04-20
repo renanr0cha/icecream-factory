@@ -70,7 +70,6 @@ main p {
   right: 0;
   margin: auto auto;
   z-index: 2;
-  animation: showup 1000ms ease-in-out backwards
 
 }
 
@@ -137,6 +136,7 @@ main p {
 
 .card img {
   border-radius: 2.0rem;
+  animation: downtop 1000ms ease-in-out backwards;
 
 }
 
@@ -162,6 +162,8 @@ main p {
   padding: 0 2.4rem;
   background: var(--bg-chips);
   border-radius: 2rem;
+  animation: topdown 500ms 700ms backwards;
+
 }
 
 footer {
